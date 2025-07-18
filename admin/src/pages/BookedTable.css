@@ -1,0 +1,131 @@
+.booked-table-container {
+  padding: 40px 20px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.booked-table-container h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+.booked-table-container p {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #777;
+}
+
+.booked-table {
+  overflow-x: auto;
+}
+
+.booked-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  overflow: hidden;
+  animation: fadeInUp 0.6s ease;
+}
+
+.booked-table th,
+.booked-table td {
+  padding: 14px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: left;
+  font-size: 14px;
+}
+
+.booked-table th {
+  background-color: #f9fafc;
+  font-weight: 600;
+  color: #333;
+}
+
+.booked-table tr:hover {
+  background-color: #f4f8ff;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status.accepted {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.rejected {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.accept-btn,
+.reject-btn {
+  padding: 6px 12px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.accept-btn {
+  background-color: #28a745;
+}
+
+.reject-btn {
+  background-color: #dc3545;
+}
+
+.accept-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.reject-btn:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .booked-table-container {
+    padding: 20px 10px;
+  }
+
+  .booked-table th,
+  .booked-table td {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .accept-btn,
+  .reject-btn {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+}

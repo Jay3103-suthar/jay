@@ -1,0 +1,16 @@
+.ordercart {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 24px;
+  margin: 24px 0;
+}
+
+.ordercart h2 {
+  color: #282c34;
+  margin-bottom: 12px;
+}
+
+.ordercart p {
+  color: #555;
+} 

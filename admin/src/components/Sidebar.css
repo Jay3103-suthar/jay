@@ -1,0 +1,74 @@
+.admin-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.admin-logo img {
+  height: 60px;
+}
+
+.admin-links {
+  display: flex;
+  gap: 20px;
+}
+
+.admin-links a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: rgb(249, 89, 89);
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.admin-links a:hover,
+.admin-links a.active {
+  background-color: rgb(249, 89, 89);
+  color: white;
+  font-weight: bold;
+}
+
+.admin-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .admin-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: white;
+    width: 100%;
+    padding: 15px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .admin-links.show {
+    display: flex;
+  }
+
+  .admin-toggle {
+    display: block;
+  }
+
+  .admin-links a {
+    text-align: center;
+    font-size: 1rem;
+  }
+}

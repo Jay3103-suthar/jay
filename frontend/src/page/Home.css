@@ -1,0 +1,390 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.slider {
+  position: relative;
+  background-color: rgba(128, 128, 128, 0.106);
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.slider img {
+  margin-left: 50%;
+  animation: rotate360 20s linear infinite;
+  height: auto;
+  width: 35%;
+}
+
+.book {
+  position: absolute;
+  left: 10%;
+  top: 35%;
+  animation: fadeSlideIn 1.5s ease-out;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.book h2 span,
+.book h2 {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 2.8rem;
+  color: gray;
+}
+
+.book h2 span {
+  color: rgb(249, 89, 89);
+}
+
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+
+.sticky-nav.hidden {
+  transform: translateY(-100%);
+}
+
+.sticky-nav.visible {
+  transform: translateY(0);
+}
+
+.book p {
+  color: rgb(83, 82, 82);
+  font-weight: 400;
+  padding-top: 15px;
+  padding-left: 5px;
+}
+
+.book button {
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background-color: rgb(249, 89, 89);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.book button:hover {
+  background-color: #e05454;
+  transform: scale(1.05);
+}
+
+.about1 {
+  display: flex;
+  margin: 20px;
+  gap: 20px;
+  justify-content: center;
+}
+
+.a1 {
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  width: 30%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.155);
+  margin: 10px;
+  cursor: pointer;
+}
+
+.a1:hover {
+  background-color: rgb(249, 89, 89);
+  transform: translateY(-5px);
+}
+
+.a1:hover h4,
+.a1:hover h6,
+.a1:hover p,
+.a1:hover i {
+  color: white !important;
+}
+
+.about1 .a1 h6 {
+  color: rgb(249, 89, 89);
+  font-size: 1.2rem;
+  padding-top: 5px;
+}
+
+.about1 .a1 h4 {
+  padding-top: 13px;
+  font-size: 1.4rem;
+  font-family: "Michroma", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.about1 .a1 p {
+  padding-top: 10px;
+  color: gray;
+}
+
+.about-text h2 {
+  font-family: "Comic Relief", system-ui;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.8rem;
+  text-align: center;
+  color: rgb(249, 89, 89);
+}
+
+.about-text .j {
+  color: grey;
+  font-size: 1.5rem;
+}
+
+.about-text {
+  margin: 20px;
+}
+
+.about-img {
+  width: 100%;
+  display: flex;
+}
+
+.img {
+  width: 50%;
+}
+
+.text1 {
+  margin-top: 40px;
+  width: 50%;
+}
+
+.text1 h4 {
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  margin-right: 50px;
+}
+
+.text1 h6 {
+  margin: 30px 50px 0;
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: grey;
+  font-family: "Caveat", cursive;
+  font-style: normal;
+}
+
+.ex {
+  margin-top: 20px;
+  display: flex;
+}
+
+.exp, .expr {
+  border-left: 5px solid rgb(249, 89, 89);
+  display: flex;
+}
+
+.expr {
+  margin-left: 200px;
+}
+
+.exp {
+  margin-left: 50px;
+}
+
+.exp1, .expr1 {
+  margin-left: 10px;
+  color: rgb(249, 89, 89);
+  font-size: 2rem;
+  font-family: "Comic Relief", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.exp2, .expr2 {
+  margin-left: 30px;
+}
+
+.exp2 p, .expr2 p {
+  padding-top: 5px;
+  color: gray;
+}
+
+.exp2 h5, .expr2 h5 {
+  font-size: 1rem;
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media (max-width: 768px) {
+ .book{
+  position: absolute;
+  left: 5%;
+  top: 5%;
+}
+
+.book h2 span{
+  font-size: 1.1rem;
+}
+.book h2{
+  font-size: 1.1rem;
+}
+.book p{
+
+  font-weight: 500;
+  padding-top: 10px;
+  font-size: 0.8rem;
+}
+.book button{
+  font-size: 15px;
+}
+.about1{
+  display: block;
+  width: 100%;
+} 
+.about1 {
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+  gap: 5px;
+  }
+.a1 {
+  width: 50%;
+  text-align: center;
+  }
+.about1 .a1 h6{
+  font-size: 10px;
+  }
+.about1 .a1 h4{
+  font-size: 15px;
+  }
+.a1 p{
+  display: none;
+  }
+
+  .about-img {
+    flex-direction: column;
+  }
+
+  .img,
+  .text1 {
+    width: 100%;
+  }
+
+  .text1 {
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .expr {
+    margin-left: 30px;
+  }
+
+  .exp,
+  .expr {
+    margin-left: 20px;
+  }
+  .about-text {
+    margin: 0px;
+}
+
+  .exp2,
+  .expr2 {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .book h2 {
+    font-size: 20px;
+  }
+
+  .book button {
+    width: 85%;
+    font-size: 15px;
+  }
+
+  .a1 {
+    padding: 15px;
+  }
+  .img{
+    display: none;
+  }
+  .about-text h2 {
+    font-size: 1.5rem;
+}
+.about-text .j {
+    font-size: 1.2rem;
+}
+.text1 h4 {
+    font-size: 1.2rem;
+    margin-right: 0;
+  }
+
+  .text1 h6 {
+    font-size: 1rem;
+    margin-right: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .img {
+    display: none;
+  }
+
+  .exp1,
+  .expr1 {
+    font-size: 1.5rem;
+  }
+
+  .exp2 h5,
+  .expr2 h5 {
+    font-size: 0.9rem;
+  }
+
+  .exp2 p,
+  .expr2 p {
+    font-size: 0.8rem;
+  }
+}
+
